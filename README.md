@@ -35,3 +35,8 @@ or
 copy NUL .nojekyll
 ```
 
+### git에 올리기 
+
+`git push`를 진행하면 github-pages 항목을 확인할 수 있습니다.  
+
+![image-20221120182632977](assets/image-20221120182632977.png)
