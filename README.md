@@ -42,3 +42,12 @@ copy NUL .nojekyll
 `git push`를 진행하면 github-pages 항목을 확인할 수 있습니다.  
 
 ![image-20221120182632977](assets/image-20221120182632977.png)
+
+
+
+### 배포 디렉토리의 설정 
+
+github의 respository `Settings -> Pages `에서 문서 디렉토리를 지정합니다. 
+
+![image-20221120183836218](assets/image-20221120183836218.png)
+
