@@ -2,28 +2,28 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "bit-edu",
+    "title": "쿼토(quarto)와 디지털 글쓰기",
     "section": "",
     "text": "quarto와 github을 이용하여 디지털 보고서 및 문서를 작성하여 볼 수 있습니다. 동적인 문서는 애플리케이션으로 만들고 반응형 문서 / 보고서는 quarto를 이용하여 제작하여 볼 수 있습니다."
   },
   {
     "objectID": "index.html#배포저장소-만들기",
     "href": "index.html#배포저장소-만들기",
-    "title": "bit-edu",
+    "title": "쿼토(quarto)와 디지털 글쓰기",
     "section": "배포저장소 만들기",
     "text": "배포저장소 만들기\ngithub.com에 새로운 저장소(New Repository)를 만듭니다.\nusername.github.io이름으로 저장소를 만듭니다. username은 팀이나 개인의 이름을 넣어줍니다.\n개인의 깃헙페이지를 만들어보겠습니다.\njoygram.github.io"
   },
   {
     "objectID": "index.html#쿼토quarto-페이지-정보_quarto.yml-만들기",
     "href": "index.html#쿼토quarto-페이지-정보_quarto.yml-만들기",
-    "title": "bit-edu",
+    "title": "쿼토(quarto)와 디지털 글쓰기",
     "section": "쿼토(quarto) 페이지 정보(_quarto.yml) 만들기",
     "text": "쿼토(quarto) 페이지 정보(_quarto.yml) 만들기\n#_quarto.yml\nproject:\n  type: website \n  output-dir: docs\n\ngithub의 ‘Jekyll’ 툴 동작하지 않게 하기\n.nojekyll 파일 만들기\ntouch .nojekyll\nor \ncopy NUL .nojekyll\n\n\ngit에 올리기\nquarto render\ngit push를 진행하면 github-pages 항목을 확인할 수 있습니다.\n\n\n\nimage-20221120182632977\n\n\n\n\n배포 디렉토리의 설정\ngithub의 respository Settings -> Pages에서 문서 디렉토리를 지정합니다.\n\n\n\nimage-20221120183836218"
   },
   {
     "objectID": "index.html#수동으로-반영",
     "href": "index.html#수동으로-반영",
-    "title": "bit-edu",
+    "title": "쿼토(quarto)와 디지털 글쓰기",
     "section": "수동으로 반영",
     "text": "수동으로 반영\npush할 때마다 자동으로 빌드되도록 반영할 수 있고 필요에 따라 수동으로 배포할 수 있습니다."
   },
