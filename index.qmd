@@ -1,0 +1,7 @@
+---
+pagetitle: "joygram's snippets"
+---
+
+## quarto를 이용한 디지털 보고서 작성 
+quarto와 github을 이용하여 디지털 보고서 및 문서를 작성하여 볼 수 있습니다. 
+동적인 문서는 애플리케이션으로 만들고 반응형 문서 / 보고서는 quarto를 이용하여 제작하여 볼 수 있습니다. 
