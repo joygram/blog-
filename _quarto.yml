@@ -1,3 +1,13 @@
 project:
   type: website 
   output-dir: docs
+website:
+  title: "bit-edu"
+  navbar:
+    background: dark
+    title: false
+    collapse-below: lg
+    left:
+      - text: "프레젠테이션"
+        href: presentation/index.qmd
+      - text: "통계와 디지털글쓰기"
