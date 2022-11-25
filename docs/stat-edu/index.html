@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>joygram’s snippets</title>
+<title>쿼토(quarto)와 디지털 글쓰기 - 통계 교육과 디지털 글쓰기</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -62,7 +62,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./presentation/index.html">프레젠테이션</a>
+    <a class="nav-link" href="../presentation/index.html">프레젠테이션</a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -83,69 +83,40 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
-
-
-<section id="quarto를-이용한-디지털-보고서-작성" class="level2">
-<h2 class="anchored" data-anchor-id="quarto를-이용한-디지털-보고서-작성">quarto를 이용한 디지털 보고서 작성</h2>
-<p>quarto와 github을 이용하여 디지털 보고서 및 문서를 작성하여 볼 수 있습니다. 동적인 문서는 애플리케이션으로 만들고 반응형 문서 / 보고서는 quarto를 이용하여 제작하여 볼 수 있습니다.</p>
-</section>
-<section id="쿼토quarto-github-pages에-배포해보기" class="level1">
-<h1>쿼토(Quarto) GitHub Pages에 배포해보기</h1>
-<section id="배포저장소-만들기" class="level2">
-<h2 class="anchored" data-anchor-id="배포저장소-만들기">배포저장소 만들기</h2>
-<p>github.com에 새로운 저장소(New Repository)를 만듭니다.</p>
-<p><code>username.github.io</code>이름으로 저장소를 만듭니다. <code>username</code>은 팀이나 개인의 이름을 넣어줍니다.</p>
-<p>개인의 깃헙페이지를 만들어보겠습니다.</p>
-<pre><code>joygram.github.io</code></pre>
-</section>
-<section id="쿼토quarto-페이지-정보_quarto.yml-만들기" class="level2">
-<h2 class="anchored" data-anchor-id="쿼토quarto-페이지-정보_quarto.yml-만들기">쿼토(quarto) 페이지 정보(_quarto.yml) 만들기</h2>
-<pre><code>#_quarto.yml
-project:
-  type: website 
-  output-dir: docs</code></pre>
-<section id="github의-jekyll-툴-동작하지-않게-하기" class="level3">
-<h3 class="anchored" data-anchor-id="github의-jekyll-툴-동작하지-않게-하기">github의 ‘Jekyll’ 툴 동작하지 않게 하기</h3>
-<p><code>.nojekyll</code> 파일 만들기</p>
-<pre><code>touch .nojekyll
-or 
-copy NUL .nojekyll</code></pre>
-</section>
-<section id="git에-올리기" class="level3">
-<h3 class="anchored" data-anchor-id="git에-올리기">git에 올리기</h3>
-<p><code>quarto render</code></p>
-<p><code>git push</code>를 진행하면 github-pages 항목을 확인할 수 있습니다.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/image-20221120182632977.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">image-20221120182632977</figcaption><p></p>
-</figure>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">통계 교육과 디지털 글쓰기</h1>
+<p class="subtitle lead">자연스러운 온-오프라인 교육 연계 방안</p>
 </div>
-</section>
-<section id="배포-디렉토리의-설정" class="level3">
-<h3 class="anchored" data-anchor-id="배포-디렉토리의-설정">배포 디렉토리의 설정</h3>
-<p>github의 respository <code>Settings -&gt; Pages</code>에서 문서 디렉토리를 지정합니다.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/image-20221120183836218.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">image-20221120183836218</figcaption><p></p>
-</figure>
-</div>
-</section>
-</section>
-<section id="수동으로-반영" class="level2">
-<h2 class="anchored" data-anchor-id="수동으로-반영">수동으로 반영</h2>
-<p>push할 때마다 자동으로 빌드되도록 반영할 수 있고 필요에 따라 수동으로 배포할 수 있습니다.</p>
 
 
-</section>
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="수학-통계-교육과-디지털-글쓰기" class="level1">
+<h1>수학 통계 교육과 디지털 글쓰기</h1>
+<p>이론과 교육 그리고 현실과 단절된 부분을 자연스럽게 연결할 수 있는 방법을 고민하고 연구해야할 필요가 있습니다.</p>
+<p>이론 교육과 현실과 벌어진 거리를 조금이라도 줄여볼 수 있는 다양한 시도를 해보고자 합니다.</p>
+<ul>
+<li><p><a href="../stat-edu/수학통계교육의고찰.html">수학 통계교육에 대한 고찰</a></p></li>
+<li><p><a href="../stat-edu/수학통계교육의고찰.html">온-오프라인의 연계 방안</a></p></li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->

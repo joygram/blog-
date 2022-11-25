@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>쿼토(quarto)와 디지털 글쓰기 – freq_table_02</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../presentation/index.html">프레젠테이션</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="육상팀-달리기-속도의-도수분포-분석" class="level1">
+<h1>육상팀 달리기 속도의 도수분포 분석</h1>
+<p><code>마크웹 쿠거스</code> 육상 팀의 코치는 그의 팀원들의 키를 라이벌인 <code>샘슨 호크스</code>팀과 비교하려고 합니다. 그는 달리기 속도와 키 사이에 상관관계 가 있는지 궁금했습니다.</p>
+<section id="데이터의-수집-어떤것을-분석할-것인가" class="level3">
+<h3 class="anchored" data-anchor-id="데이터의-수집-어떤것을-분석할-것인가">데이터의 수집 : 어떤것을 분석할 것인가?</h3>
+<p>코치는 키를 작은키에서 큰키 순으로 정리했습니다.</p>
+<p>마크웰 쿠거스:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>markwell <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">170</span>, <span class="dv">172</span>, <span class="dv">175</span>, <span class="dv">176</span>, <span class="dv">176</span>, <span class="dv">176</span>, <span class="dv">178</span>, <span class="dv">181</span>, <span class="dv">182</span>, <span class="dv">183</span>, <span class="dv">183</span>, <span class="dv">183</span>, <span class="dv">185</span>, <span class="dv">185</span>, <span class="dv">187</span>, <span class="dv">188</span>, <span class="dv">188</span>, <span class="dv">189</span>, <span class="dv">190</span>, <span class="dv">195</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>샘슨 호크스:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>samson <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">169</span>, <span class="dv">175</span>, <span class="dv">176</span>, <span class="dv">176</span>, <span class="dv">178</span>, <span class="dv">179</span>, <span class="dv">180</span>, <span class="dv">183</span>, <span class="dv">183</span>, <span class="dv">186</span>, <span class="dv">186</span>, <span class="dv">186</span>, <span class="dv">187</span>, <span class="dv">187</span>, <span class="dv">187</span>, <span class="dv">187</span>, <span class="dv">187</span>, <span class="dv">188</span>, <span class="dv">190</span>, <span class="dv">191</span>, <span class="dv">192</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>이렇게 정리한 자료(데이터:data)를 시각적으로 만들것입니다.</p>
+</section>
+<section id="도수빈도frequency" class="level2">
+<h2 class="anchored" data-anchor-id="도수빈도frequency">도수(빈도:Frequency)</h2>
+<p>도수분포표(빈도표:frequency table)와 히스토그램(histogram)을 살펴보겠습니다.</p>
+<p>(빈)도수(빈도:Frequency)는 어떤 일이 얼마나 자주 발생하는지에 대한 척도입니다.</p>
+<p>도수분포표(빈도표:Frequency table)는 데이터 값이 얼마나 자주 발생하는지 측정하고 시각적으로 표시하는데 사용합니다.</p>
+<section id="데이터의-분류-구분하여-분류-계급interval" class="level3">
+<h3 class="anchored" data-anchor-id="데이터의-분류-구분하여-분류-계급interval">데이터의 분류 : 구분하여 분류 (계급:interval)</h3>
+<p>코치는 두개의 팀의 키의 자료를 구간으로 나누어서 집계를 하고 그것을 숫자로 표현하였습니다.</p>
+<p>조사한 자료로 키의 간격(interval)을 10단위로 계급(class)화 합니다. mar</p>
+<pre><code>간격      
+160 - 169  
+170 - 179  
+180 - 189  
+190 - 199 
+</code></pre>
+<p>계급의 수(Number of class)는 <code>4개</code>가 됩니다.</p>
+</section>
+<section id="표를-통해-시각화" class="level3">
+<h3 class="anchored" data-anchor-id="표를-통해-시각화">표를 통해 시각화</h3>
+<p>성적과 등급을 시각적으로 표현하기 위해 (빈)도수분포표(빈도표:frequency table)을 만들 것입니다.</p>
+<p>주어진 범위에 포함하는 각 선수의 키 대해 X로 집계합니다.</p>
+<section id="두팀의-키의-도수분포표빈도표frequency-table" class="level4">
+<h4 class="anchored" data-anchor-id="두팀의-키의-도수분포표빈도표frequency-table">두팀의 키의 도수분포표(빈도표:frequency table)</h4>
+<pre><code>          |마크웰                    |샘슨 
+----------|--------------------------|---------------------          
+간격      | 집계             빈도    | 집계            빈도 
+160 - 169 |                          | x                 1 
+170 - 179 | xxxxx xx           7     | xxxx              5 
+180 - 189 | xxxxx xxxxx x     11     | xxxxx xxxxx xx   12 
+190 - 199 | xx                 2     | xxx               3 </code></pre>
+<p>이 집계표를 통해 두 팀의 키의 분포를 비교할 수 있습니다.</p>
+<p>두팀에서 대부분의 선수의 키가 180-189 인 것을 알 수 있습니다.</p>
+</section>
+</section>
+<section id="히스토그램-그래프를-만들어서-표현" class="level3">
+<h3 class="anchored" data-anchor-id="히스토그램-그래프를-만들어서-표현">히스토그램 그래프를 만들어서 표현</h3>
+<p>다음으로 코치는 히스토그램을 만들었습니다.</p>
+<p>x축과 y축을 이용해 데이터를 표시하는 점에서 막대그래프와 비슷합니다.</p>
+<p>히스토그램은 그래프사이에 간격이 없고 막대사이에 간격이 동일합니다.</p>
+<p>이 간격은 도수분포표의 계급(간격:interval)과 같습니다.</p>
+<p>값을 넣어서 표를 완성해볼까요?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#X축 설명</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x_lab <span class="ot">&lt;-</span> <span class="st">"선수들의 키 구간"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#y축 설명</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>y_lab <span class="ot">&lt;-</span> <span class="st">"키의 빈도수"</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">#계급간 구간(interval)</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>intervals <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">160</span>, <span class="dv">169</span>, <span class="dv">179</span>, <span class="dv">189</span>, <span class="dv">199</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>마크웰팀의 히스토그램은 다음과 같이 나타납니다.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># markwell팀의 표이므로 `markwell`을 넣어주어요.</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">#표 제목</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>title <span class="ot">&lt;-</span> <span class="st">"마크웰 팀의 선수들의 키 분포"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(markwell, <span class="at">breaks=</span>intervals, <span class="at">main=</span>title, <span class="at">xlab=</span>x_lab, <span class="at">ylab=</span>y_lab, <span class="at">labels=</span>T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="freq_table_02_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="샘슨팀의-히스토그램" class="level2">
+<h2 class="anchored" data-anchor-id="샘슨팀의-히스토그램">샘슨팀의 히스토그램</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#표 제목</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>title <span class="ot">&lt;-</span> <span class="st">"샘슨 팀의 선수들의 키 분포"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#아래 `samson`팀의 점수가 들어가요.   </span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(samson, <span class="at">breaks =</span> intervals, <span class="at">main =</span> title, <span class="at">xlab =</span> x_lab, <span class="at">ylab =</span> y_lab, <span class="at">labels =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="freq_table_02_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>히스토그램은 도수분포표(빈도표:frequency table)와 동일한 정보를 표현합니다.</p>
+<p>두팀 모두 180-189구간에 가장 많은 선수들이 있음을 알 수 있습니다.</p>
+<p>코거스는 170-179구간 쪽에 선수들이 더 많은 반면 호크스는 더 큰 키의 구간에 선수들이 더 많습니다.</p>
+<p>호크스가 키에 있어 더 유리함을 알 수 있습니다.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

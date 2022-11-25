@@ -7,9 +7,9 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.1.189">
+  <meta name="generator" content="quarto-1.1.251">
 
-  <title>쿼토(quarto)와 디지털 글쓰기 - bit-edu</title>
+  <title>쿼토(quarto)와 디지털 글쓰기 - 쿼토(quarto)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,6 +27,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -323,12 +387,16 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">bit-edu</h1>
+  <h1 class="title">쿼토(quarto)</h1>
 </section>
 
-<section id="쿼토quarto" class="slide level2">
-<h2>쿼토(quarto)</h2>
-<p>Don’t reinvent the wheel</p>
+<section>
+<section id="쿼토quarto" class="title-slide slide level1 center">
+<h1>쿼토(quarto)</h1>
+
+</section>
+<section id="용도" class="slide level2">
+<h2>용도</h2>
 <ul>
 <li class="fragment">markdown</li>
 <li class="fragment">R, Python</li>
@@ -336,52 +404,85 @@
 <li class="fragment">다양한 출력 : 퍼블리싱</li>
 </ul>
 </section>
-<section id="무엇을-위해서.." class="slide level2">
-<h2>무엇을 위해서..?</h2>
+<section id="무엇이-좋은가" class="slide level2">
+<h2>무엇이 좋은가?</h2>
 <ul>
-<li class="fragment">작업환경의 <code>재구성 용이</code></li>
-<li class="fragment">배포와 테스트 <code>사이클</code> 단축<br>
-</li>
-<li class="fragment"><code>사소한 변경</code>으로 이미지 생성 안하기<br>
-</li>
-<li class="fragment">환경과 개발환경의 <code>통합</code></li>
-<li class="fragment">환경세팅을 <code>설명하는게</code> 힘들다</li>
+<li class="fragment">마크다운 문서를 그대로 활용</li>
+<li class="fragment">문서가 프레젠테이션이 된다.</li>
+<li class="fragment">편집이 용이하다.</li>
+<li class="fragment">코드를 실행할 수 있다.</li>
 </ul>
 </section>
-<section id="저장소-자체가-웹사이트가-된다." class="slide level2">
-<h2>저장소 자체가 웹사이트가 된다.</h2>
-<p>문서를 작성하고 배포하면 웹사이트가 된다. - 반응형 웹사이트를 손쉽게 구축할 수 있다. - 본연의 문서/보고서에 집중할 수 있다.</p>
-</section>
-<section id="어디에-활용을" class="slide level2">
-<h2>어디에 활용을?</h2>
+<section id="단점" class="slide level2">
+<h2>단점</h2>
 <ul>
-<li class="fragment">규모가 있는 <code>패키지의 개발 &amp; 배포</code></li>
-<li class="fragment">실습이 용이한 <code>교육환경</code>의 구축</li>
-<li class="fragment">환경 세팅을 <code>최소화</code>한 협업 개발 환경의 구성</li>
+<li class="fragment">세밀한 작업</li>
+<li class="fragment">세련된 기능 부족</li>
 </ul>
 </section>
-<section id="써보기" class="slide level2">
-<h2>써보기</h2>
-<ul>
-<li class="fragment">Docker Desktop 설치</li>
-<li class="fragment">bit-server 내려받기
-<ul>
-<li class="fragment">git clone https://github.com/joygram/bit-server.git</li>
-</ul></li>
-<li class="fragment">도커 이미지 실행
-<ul>
-<li class="fragment">cd bit-server/docker</li>
-<li class="fragment">./run_docker.[cmd,sh]</li>
-</ul></li>
-</ul>
-</section>
-<section id="서버로-배포" class="slide level2">
-<h2>서버로 배포</h2>
-
-<div class="footer footer-default">
+<section id="파이썬-코드의-실행" class="slide level2">
+<h2>파이썬 코드의 실행</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb1-5"><a href="#cb1-5"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb1-6"><a href="#cb1-6"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">"projection"</span>: <span class="st">"polar"</span>})</span>
+<span id="cb1-7"><a href="#cb1-7"></a>ax.plot(theta, r)</span>
+<span id="cb1-8"><a href="#cb1-8"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb1-9"><a href="#cb1-9"></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb1-10"><a href="#cb1-10"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
+<section id="r-코드의-실행" class="slide level2">
+<h2>R 코드의 실행</h2>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-2-3.png" width="960" class="r-stretch"></section>
+<section id="심플하고-빠르게" class="slide level2">
+<h2>심플하고 빠르게</h2>
+<ul>
+<li class="fragment">발표자료를 만들고 공유</li>
+<li class="fragment">분석자료와 글쓰기의 통합</li>
+</ul>
+</section></section>
+<section>
+<section id="깃헙페이지" class="title-slide slide level1 center">
+<h1>깃헙페이지</h1>
+
 </section>
+<section id="반응형-페이지" class="slide level2">
+<h2>반응형 페이지</h2>
+<ul>
+<li class="fragment">깃헙과 연동.</li>
+<li class="fragment">html을 올리면 호스팅이됨.</li>
+<li class="fragment">자동으로 빌드와 배포가 됨.</li>
+</ul>
+</section></section>
+<section>
+<section id="사용해보기" class="title-slide slide level1 center">
+<h1>사용해보기</h1>
+
+</section>
+<section id="demo-site-내려받기" class="slide level2">
+<h2>demo site 내려받기</h2>
+<pre><code>git clone https://github.com/joygram/joygram.github.io</code></pre>
+</section>
+<section id="빌드" class="slide level2">
+<h2>빌드</h2>
+<pre><code>cd joygram.github.io 
+quarto render</code></pre>
+</section>
+<section id="배포" class="slide level2">
+<h2>배포</h2>
+<pre><code>git commit -m "update document" -a 
+git push</code></pre>
+
+<div class="footer footer-default">
+<p>디지털 글쓰기</p>
+</div>
+</section></section>
     </div>
   </div>
 
@@ -593,6 +694,48 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

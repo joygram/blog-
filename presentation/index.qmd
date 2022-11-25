@@ -1,0 +1,82 @@
+---
+title: 쿼토(quarto)
+sub-title: github에 웹페이지 만들기 
+format:
+  revealjs:
+    view-distance: 5
+    slide-number: true 
+    preview-links: auto
+    incremental: true
+    theme: sky
+footer: "디지털 글쓰기"
+---
+
+# 쿼토(quarto)
+
+## 용도
+- markdown 
+- R, Python 
+- 디지털 글쓰기 
+- 다양한 출력 : 퍼블리싱  
+
+## 무엇이 좋은가? 
+- 마크다운 문서를 그대로 활용 
+- 문서가 프레젠테이션이 된다. 
+- 편집이 용이하다.
+- 코드를 실행할 수 있다.   
+
+## 단점
+- 세밀한 작업
+- 세련된 기능 부족
+
+## 파이썬 코드의 실행 
+
+```{python}
+#| echo: true
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={"projection": "polar"})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+## R 코드의 실행 
+```{r}
+math_score = c(88, 86, 92, 65, 72, 75, 81, 84, 85, 93, 99, 50, 78, 80, 86, 76, 74, 95, 81, 87, 90, 72, 76, 61, 85, 84, 78, 83)
+hist(math_score, breaks=5, main="B반의 수학 성적빈도", xlab= "수학성적", ylab="빈도수")
+```
+
+## 심플하고 빠르게
+- 발표자료를 만들고 공유 
+- 분석자료와 글쓰기의 통합 
+
+# 깃헙페이지
+
+## 반응형 페이지
+- 깃헙과 연동.
+- html을 올리면 호스팅이됨. 
+- 자동으로 빌드와 배포가 됨.
+
+# 사용해보기 
+
+## demo site 내려받기 
+```
+git clone https://github.com/joygram/joygram.github.io
+```
+##  빌드 
+```
+cd joygram.github.io 
+quarto render
+``` 
+## 배포 
+```
+git commit -m "update document" -a 
+git push
+```
+

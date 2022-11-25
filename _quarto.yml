@@ -2,7 +2,7 @@ project:
   type: website 
   output-dir: docs
 website:
-  title: "bit-edu"
+  title: "쿼토(quarto)와 디지털 글쓰기"
   navbar:
     background: dark
     title: false
@@ -10,4 +10,5 @@ website:
     left:
       - text: "프레젠테이션"
         href: presentation/index.qmd
-      - text: "통계와 디지털글쓰기"
+#      - text: "통계와 디지털글쓰기"
+#        href: stat-edu/index.qmd

@@ -28,45 +28,220 @@
     "text": "수동으로 반영\npush할 때마다 자동으로 빌드되도록 반영할 수 있고 필요에 따라 수동으로 배포할 수 있습니다."
   },
   {
-    "objectID": "presentation/index.html#쿼토quarto",
-    "href": "presentation/index.html#쿼토quarto",
-    "title": "bit-edu",
-    "section": "쿼토(quarto)",
-    "text": "쿼토(quarto)\nDon’t reinvent the wheel\n\nmarkdown\nR, Python\n디지털 글쓰기\n다양한 출력 : 퍼블리싱"
+    "objectID": "presentation/index.html#용도",
+    "href": "presentation/index.html#용도",
+    "title": "쿼토(quarto)",
+    "section": "용도",
+    "text": "용도\n\nmarkdown\nR, Python\n디지털 글쓰기\n다양한 출력 : 퍼블리싱"
   },
   {
-    "objectID": "presentation/index.html#무엇을-위해서..",
-    "href": "presentation/index.html#무엇을-위해서..",
-    "title": "bit-edu",
-    "section": "무엇을 위해서..?",
-    "text": "무엇을 위해서..?\n\n작업환경의 재구성 용이\n배포와 테스트 사이클 단축\n\n사소한 변경으로 이미지 생성 안하기\n\n환경과 개발환경의 통합\n환경세팅을 설명하는게 힘들다"
+    "objectID": "presentation/index.html#무엇이-좋은가",
+    "href": "presentation/index.html#무엇이-좋은가",
+    "title": "쿼토(quarto)",
+    "section": "무엇이 좋은가?",
+    "text": "무엇이 좋은가?\n\n마크다운 문서를 그대로 활용\n문서가 프레젠테이션이 된다.\n편집이 용이하다.\n코드를 실행할 수 있다."
   },
   {
-    "objectID": "presentation/index.html#저장소-자체가-웹사이트가-된다.",
-    "href": "presentation/index.html#저장소-자체가-웹사이트가-된다.",
-    "title": "bit-edu",
-    "section": "저장소 자체가 웹사이트가 된다.",
-    "text": "저장소 자체가 웹사이트가 된다.\n문서를 작성하고 배포하면 웹사이트가 된다. - 반응형 웹사이트를 손쉽게 구축할 수 있다. - 본연의 문서/보고서에 집중할 수 있다."
+    "objectID": "presentation/index.html#단점",
+    "href": "presentation/index.html#단점",
+    "title": "쿼토(quarto)",
+    "section": "단점",
+    "text": "단점\n\n세밀한 작업\n세련된 기능 부족"
   },
   {
-    "objectID": "presentation/index.html#어디에-활용을",
-    "href": "presentation/index.html#어디에-활용을",
-    "title": "bit-edu",
-    "section": "어디에 활용을?",
-    "text": "어디에 활용을?\n\n규모가 있는 패키지의 개발 & 배포\n실습이 용이한 교육환경의 구축\n환경 세팅을 최소화한 협업 개발 환경의 구성"
+    "objectID": "presentation/index.html#파이썬-코드의-실행",
+    "href": "presentation/index.html#파이썬-코드의-실행",
+    "title": "쿼토(quarto)",
+    "section": "파이썬 코드의 실행",
+    "text": "파이썬 코드의 실행\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={\"projection\": \"polar\"})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()"
   },
   {
-    "objectID": "presentation/index.html#써보기",
-    "href": "presentation/index.html#써보기",
-    "title": "bit-edu",
-    "section": "써보기",
-    "text": "써보기\n\nDocker Desktop 설치\nbit-server 내려받기\n\ngit clone https://github.com/joygram/bit-server.git\n\n도커 이미지 실행\n\ncd bit-server/docker\n./run_docker.[cmd,sh]"
+    "objectID": "presentation/index.html#r-코드의-실행",
+    "href": "presentation/index.html#r-코드의-실행",
+    "title": "쿼토(quarto)",
+    "section": "R 코드의 실행",
+    "text": "R 코드의 실행"
   },
   {
-    "objectID": "presentation/index.html#서버로-배포",
-    "href": "presentation/index.html#서버로-배포",
-    "title": "bit-edu",
-    "section": "서버로 배포",
-    "text": "서버로 배포"
+    "objectID": "presentation/index.html#심플하고-빠르게",
+    "href": "presentation/index.html#심플하고-빠르게",
+    "title": "쿼토(quarto)",
+    "section": "심플하고 빠르게",
+    "text": "심플하고 빠르게\n\n발표자료를 만들고 공유\n분석자료와 글쓰기의 통합"
+  },
+  {
+    "objectID": "presentation/index.html#반응형-페이지",
+    "href": "presentation/index.html#반응형-페이지",
+    "title": "쿼토(quarto)",
+    "section": "반응형 페이지",
+    "text": "반응형 페이지\n\n깃헙과 연동.\nhtml을 올리면 호스팅이됨.\n자동으로 빌드와 배포가 됨."
+  },
+  {
+    "objectID": "presentation/index.html#demo-site-내려받기",
+    "href": "presentation/index.html#demo-site-내려받기",
+    "title": "쿼토(quarto)",
+    "section": "demo site 내려받기",
+    "text": "demo site 내려받기\ngit clone https://github.com/joygram/joygram.github.io"
+  },
+  {
+    "objectID": "presentation/index.html#빌드",
+    "href": "presentation/index.html#빌드",
+    "title": "쿼토(quarto)",
+    "section": "빌드",
+    "text": "빌드\ncd joygram.github.io \nquarto render"
+  },
+  {
+    "objectID": "presentation/index.html#배포",
+    "href": "presentation/index.html#배포",
+    "title": "쿼토(quarto)",
+    "section": "배포",
+    "text": "배포\ngit commit -m \"update document\" -a \ngit push\n\n\n디지털 글쓰기"
+  },
+  {
+    "objectID": "presentation/joygram.github.io/index.html",
+    "href": "presentation/joygram.github.io/index.html",
+    "title": "쿼토(quarto)와 디지털 글쓰기",
+    "section": "",
+    "text": "quarto와 github을 이용하여 디지털 보고서 및 문서를 작성하여 볼 수 있습니다. 동적인 문서는 애플리케이션으로 만들고 반응형 문서 / 보고서는 quarto를 이용하여 제작하여 볼 수 있습니다."
+  },
+  {
+    "objectID": "presentation/joygram.github.io/index.html#배포저장소-만들기",
+    "href": "presentation/joygram.github.io/index.html#배포저장소-만들기",
+    "title": "쿼토(quarto)와 디지털 글쓰기",
+    "section": "배포저장소 만들기",
+    "text": "배포저장소 만들기\ngithub.com에 새로운 저장소(New Repository)를 만듭니다.\nusername.github.io이름으로 저장소를 만듭니다. username은 팀이나 개인의 이름을 넣어줍니다.\n개인의 깃헙페이지를 만들어보겠습니다.\njoygram.github.io"
+  },
+  {
+    "objectID": "presentation/joygram.github.io/index.html#쿼토quarto-페이지-정보_quarto.yml-만들기",
+    "href": "presentation/joygram.github.io/index.html#쿼토quarto-페이지-정보_quarto.yml-만들기",
+    "title": "쿼토(quarto)와 디지털 글쓰기",
+    "section": "쿼토(quarto) 페이지 정보(_quarto.yml) 만들기",
+    "text": "쿼토(quarto) 페이지 정보(_quarto.yml) 만들기\n#_quarto.yml\nproject:\n  type: website \n  output-dir: docs\n\ngithub의 ‘Jekyll’ 툴 동작하지 않게 하기\n.nojekyll 파일 만들기\ntouch .nojekyll\nor \ncopy NUL .nojekyll\n\n\ngit에 올리기\nquarto render\ngit push를 진행하면 github-pages 항목을 확인할 수 있습니다.\n\n\n\nimage-20221120182632977\n\n\n\n\n배포 디렉토리의 설정\ngithub의 respository Settings -> Pages에서 문서 디렉토리를 지정합니다.\n\n\n\nimage-20221120183836218"
+  },
+  {
+    "objectID": "presentation/joygram.github.io/index.html#수동으로-반영",
+    "href": "presentation/joygram.github.io/index.html#수동으로-반영",
+    "title": "쿼토(quarto)와 디지털 글쓰기",
+    "section": "수동으로 반영",
+    "text": "수동으로 반영\npush할 때마다 자동으로 빌드되도록 반영할 수 있고 필요에 따라 수동으로 배포할 수 있습니다."
+  },
+  {
+    "objectID": "stat-edu/freq_table_01.html",
+    "href": "stat-edu/freq_table_01.html",
+    "title": "쿼토(quarto)와 디지털 글쓰기",
+    "section": "",
+    "text": "보통중학교 B반 선생님이 학부모 회의를 준비하고 있습니다.\n학부모에게 B반의 학급성적을 다른학급의 성적과 비교하며 정보를 제공하고 싶습니다.\n선생님은 여기서 도수분포표(빈도표:frequency table)와 히스토그램을 사용하기로 하였습니다.\n\n\n\n(빈)도수(빈도:Frequency)는 :\n\n어떤 일이 얼마나 자주 발생하는지에 대한 척도입니다.\n\n도수분포표(빈도표:Frequency table)는 :\n\n데이터 값이 얼마나 자주 발생하는지 측정하고 시각적으로 표시하는데 사용합니다.\n\n\n선생님은 다음과 같은 순서로 자료를 정리하고 표를 만들어 학부모에게 공개하였습니다.\n\n\n수학성적을 백분율로 계산하여 정리하였습니다.\n\nmath_score = c(88, 86, 92, 65, 72, 75, 81, 84, 85, 93, 99, 50, 78, 80, 86, 76, 74, 95, 81, 87, 90, 72, 76, 61, 85, 84, 78, 83)\n\n선생님은 이렇게 정리한 자료(데이터:data)를 시각적으로 보여주면 좋겠다고 생각핬습니다.\n\n\n\n성적을 구분하여 등급(grade)을 매깁니다.\n90-100%는 A\n80-89%는  B\n70-79%는  C \n60-69%는  D \n0-59%는   F \n여기서 계급의 수(Number of class)는 A,B,C,D,F 5개가 되는 것을 알 수 있습니다.\n\n\n\n성적과 등급을 시각적으로 표현하기 위해 (빈)도수분포표(빈도표:frequency table)을 만들 것입니다.\n첫째, 주어진 범위에서 득점한 각 학생에 대해 집계를 x로 표시합니다. 빈도표는 X를 사용하여 표현해보겠습니다. 간격(interval)은 지정한 등급을 구간으로 하여 표현합니다.\n등급의 빈도표\n| 간격 | Tally(집계) |빈도 |\n|------|-------------|-----|\n|90-100|xxxxx        |  5  |\n|80-89 |xxxxxxxxxxxx | 12  |\n|70-79 |xxxxxxxx     |  8  |\n|60-69 |xx           |  2  |\n|0 -59 |x            |  1  |\n이 집계표는 학급에서 각 범위의 점수를 받은 학생수를 부모에게 전달할 수 있다는 점에서 유용합니다. 자녀가 B를 받았다면 대부분 학생들이 받은 점수 범주에 속한다는 것을 알 수 있습니다.\n\n\n\n다음으로 그는 히스토그램을 만들었습니다.\n\nx축과 y축을 이용해 데이터를 표시하는 점에서 막대그래프와 비슷합니다.\n히스토그램은 그래프사이에 간격이 없고 막대사이에 간격이 동일합니다.\n\n이 간격은 도수분포표의 계급(간격:interval)과 같습니다.\n\n#breaks는 계급의 수(Number of class) 입니다. \nhist(math_score, breaks=5, main=\"B반의 수학 성적빈도\", xlab= \"수학성적\", ylab=\"빈도수\")\n\n\n\n\n히스토그램은 도수분포표(빈도표:frequency table)와 동일한 정보를 표현합니다.\n그래프 이므로 좀 더 알아보기 쉽겠지요?\n\n\n\n\nB반은 B등급(80-90)이 가장 많은 것을 알 수 있습니다.\n학생 대부분은 B,C등급에 포함됨을 알 수 있고 학부모는 자녀가 보편적인지 아닌지의 여부를 금방 알 수 있을 것입니다.\n\n하지만 특정등급에 있다고 하여 어떤 판단을 하기엔 어려울 것입니다.\n\n\n그래서 선생님은 다른 학급들의 성적 빈도수를 작성하고자 한것이고 그것과 비교하여 줌으로써 수학 문제 수준이나 성적수준을 보고난다면 여러가지 상황판단 및 대응이 가능할 것입니다."
+  },
+  {
+    "objectID": "stat-edu/freq_table_02.html",
+    "href": "stat-edu/freq_table_02.html",
+    "title": "쿼토(quarto)와 디지털 글쓰기",
+    "section": "",
+    "text": "마크웹 쿠거스 육상 팀의 코치는 그의 팀원들의 키를 라이벌인 샘슨 호크스팀과 비교하려고 합니다. 그는 달리기 속도와 키 사이에 상관관계 가 있는지 궁금했습니다.\n\n\n코치는 키를 작은키에서 큰키 순으로 정리했습니다.\n마크웰 쿠거스:\n\nmarkwell = c(170, 172, 175, 176, 176, 176, 178, 181, 182, 183, 183, 183, 185, 185, 187, 188, 188, 189, 190, 195)\n\n샘슨 호크스:\n\nsamson = c(169, 175, 176, 176, 178, 179, 180, 183, 183, 186, 186, 186, 187, 187, 187, 187, 187, 188, 190, 191, 192)\n\n이렇게 정리한 자료(데이터:data)를 시각적으로 만들것입니다.\n\n\n\n도수분포표(빈도표:frequency table)와 히스토그램(histogram)을 살펴보겠습니다.\n(빈)도수(빈도:Frequency)는 어떤 일이 얼마나 자주 발생하는지에 대한 척도입니다.\n도수분포표(빈도표:Frequency table)는 데이터 값이 얼마나 자주 발생하는지 측정하고 시각적으로 표시하는데 사용합니다.\n\n\n코치는 두개의 팀의 키의 자료를 구간으로 나누어서 집계를 하고 그것을 숫자로 표현하였습니다.\n조사한 자료로 키의 간격(interval)을 10단위로 계급(class)화 합니다. mar\n간격      \n160 - 169  \n170 - 179  \n180 - 189  \n190 - 199 \n\n계급의 수(Number of class)는 4개가 됩니다.\n\n\n\n성적과 등급을 시각적으로 표현하기 위해 (빈)도수분포표(빈도표:frequency table)을 만들 것입니다.\n주어진 범위에 포함하는 각 선수의 키 대해 X로 집계합니다.\n\n\n          |마크웰                    |샘슨 \n----------|--------------------------|---------------------          \n간격      | 집계             빈도    | 집계            빈도 \n160 - 169 |                          | x                 1 \n170 - 179 | xxxxx xx           7     | xxxx              5 \n180 - 189 | xxxxx xxxxx x     11     | xxxxx xxxxx xx   12 \n190 - 199 | xx                 2     | xxx               3 \n이 집계표를 통해 두 팀의 키의 분포를 비교할 수 있습니다.\n두팀에서 대부분의 선수의 키가 180-189 인 것을 알 수 있습니다.\n\n\n\n\n다음으로 코치는 히스토그램을 만들었습니다.\nx축과 y축을 이용해 데이터를 표시하는 점에서 막대그래프와 비슷합니다.\n히스토그램은 그래프사이에 간격이 없고 막대사이에 간격이 동일합니다.\n이 간격은 도수분포표의 계급(간격:interval)과 같습니다.\n값을 넣어서 표를 완성해볼까요?\n\n#X축 설명\nx_lab <- \"선수들의 키 구간\"\n#y축 설명\ny_lab <- \"키의 빈도수\"\n\n#계급간 구간(interval)\nintervals <- c(160, 169, 179, 189, 199)\n\n마크웰팀의 히스토그램은 다음과 같이 나타납니다.\n\n# markwell팀의 표이므로 `markwell`을 넣어주어요.\n#표 제목\ntitle <- \"마크웰 팀의 선수들의 키 분포\"\n\nhist(markwell, breaks=intervals, main=title, xlab=x_lab, ylab=y_lab, labels=T)\n\n\n\n\n\n\n\n\n\n#표 제목\ntitle <- \"샘슨 팀의 선수들의 키 분포\"\n\n#아래 `samson`팀의 점수가 들어가요.   \n\nhist(samson, breaks = intervals, main = title, xlab = x_lab, ylab = y_lab, labels = T)\n\n\n\n\n히스토그램은 도수분포표(빈도표:frequency table)와 동일한 정보를 표현합니다.\n두팀 모두 180-189구간에 가장 많은 선수들이 있음을 알 수 있습니다.\n코거스는 170-179구간 쪽에 선수들이 더 많은 반면 호크스는 더 큰 키의 구간에 선수들이 더 많습니다.\n호크스가 키에 있어 더 유리함을 알 수 있습니다."
+  },
+  {
+    "objectID": "stat-edu/index.html",
+    "href": "stat-edu/index.html",
+    "title": "통계 교육과 디지털 글쓰기",
+    "section": "",
+    "text": "이론과 교육 그리고 현실과 단절된 부분을 자연스럽게 연결할 수 있는 방법을 고민하고 연구해야할 필요가 있습니다.\n이론 교육과 현실과 벌어진 거리를 조금이라도 줄여볼 수 있는 다양한 시도를 해보고자 합니다.\n\n수학 통계교육에 대한 고찰\n온-오프라인의 연계 방안"
+  },
+  {
+    "objectID": "stat-edu/수학통계교육의고찰.html",
+    "href": "stat-edu/수학통계교육의고찰.html",
+    "title": "수학 통계 교육의 고찰",
+    "section": "",
+    "text": "중등학습 과정을 기준으로 통계교육에 대한 학습과정을 살펴보았을 때\n으로 구성되어 있는 것으로 파악이 됩니다."
+  },
+  {
+    "objectID": "stat-edu/수학통계교육의고찰.html#교재-학습오프라인",
+    "href": "stat-edu/수학통계교육의고찰.html#교재-학습오프라인",
+    "title": "수학 통계 교육의 고찰",
+    "section": "교재 학습(오프라인)",
+    "text": "교재 학습(오프라인)\n매체의 종류와 관계 없이 학생이 문제를 접근하고 해결하는 방식에 따라 분류\n이론 학습 후 문제풀이하는 일반적이고 전형적인 학습방식\n\n\n\n\nstateDiagram\n과외 --> 이론 \n교실 --> 이론\n이론 --> 예제풀이 \n예제풀이 --> 문제풀이 \n문제풀이 --> 문제풀이"
+  },
+  {
+    "objectID": "stat-edu/수학통계교육의고찰.html#도구-실습온라인",
+    "href": "stat-edu/수학통계교육의고찰.html#도구-실습온라인",
+    "title": "수학 통계 교육의 고찰",
+    "section": "도구 실습(온라인)",
+    "text": "도구 실습(온라인)\n도구를 이용하여 수동계산이 아닌 자동계산 방식으로 정의해보았습니다.\n중등과정의 경우 잘 만들어진 온라인 도구를 이용하여 실습을 해볼 수 있는 다양한 환경들이 구비되어 있습니다.\n\n\n\n\nstateDiagram\n데이터셋 --> 입력 \n입력 --> 결과출력 \n결과출력 --> 저장 \n\n\n\n\n\n\n\n\n\n이지통계\nhttps://ebsmath.co.kr/easyTong\n\n\n\nimage-20221116093734207\n\n\n\n\n\nimage-20221116093814791\n\n\n\n\n히스토그램 메이커\nhttps://www.socscistatistics.com/descriptive/histograms/\n\n\n\nimage-20221116094145287"
+  },
+  {
+    "objectID": "stat-edu/수학통계교육의고찰.html#수행평가-학습",
+    "href": "stat-edu/수학통계교육의고찰.html#수행평가-학습",
+    "title": "수학 통계 교육의 고찰",
+    "section": "수행평가 학습",
+    "text": "수행평가 학습\n개인 또는 모둠을 통해 해당 학습에 대한 개념을 기초로 실습하고 학생들과 발표를 진행하고 성적에 반영합니다.\n\n\n\n\nstateDiagram \n모둠 --> 프레젠테이션자료 \n프레젠테이션자료 --> 발표"
+  },
+  {
+    "objectID": "stat-edu/수학통계교육의고찰.html#많은-것이-준비되어-있지만",
+    "href": "stat-edu/수학통계교육의고찰.html#많은-것이-준비되어-있지만",
+    "title": "수학 통계 교육의 고찰",
+    "section": "많은 것이 준비되어 있지만",
+    "text": "많은 것이 준비되어 있지만\n잘 살펴보면 아쉬운 부분이 조금씩 보여집니다.\n\n이론 수업은\n멘붕에 가깝습니다.\n중등1학년 과정 통계에 도수분포표(histogram)에 대해 배우게 됩니다.\n이론을 친절하고 정확하게 가르쳐 줍니다. 하지만 그져 가르쳐줄 뿐입니다.\n\n일상생활에서 사용하지 않는 한자로 부터 시작되는 괴리감\n\n계급(階級), 도수(頻度數), 분포(分布)\n\n이것을 왜 배워야 하는가에 대한 의구심\n\n\n성적을 평가하고 이 이론을 배우지 않으면 다음 이론을 따라갈 수 없으니 배워야 한다는 점\n그저 배우고 문제를 풀어낼 따름입니다.\n이 이론은 어딘가에 어떤 문제를 풀어 실제 삶에 사용하고 있는 것일 겁니다. 하지만 학생들에게는 그렇지 않습니다.\n저는 이것을 죽은 이론이라고 표현하고 싶습니다. 성적과 입학외에는 사용할 수 없는 이론이기 때문입니다.\n\n\n\n도구실습은\n웹기술의 뛰어난 발전과 인프라 고도화에 따라서 마음만 먹으면 언제든지, 어디서든 실습할 수 있는 환경과 도구를 가지게 되었습니다.\n실제로 학습과정에서 실습도구를 안내하고 실습을 수행합니다.\n\n하지만\n실습은 그것으로 끝이나고 맙니다.\n배운이론의 숫자가 나오는 것을 눈으로 보기만 할 뿐입니다.\n\n\n\n수행평가는 모둠을 통해\n학생들이 적극적으로 활동하고 그룹활동을 통해 팀으로 일을 해내는 것에 대한 훈련과정으로 잘 정착하고 있다고 보여집니다.\n수행평가에 매우 많은 부분의 도구로 활용하는 것이 프레젠테이션입니다. 최근에는 오프라인 오피스보다 온라인 도구를 많이 사용하고 있는 편이고 구글 프레젠테이션등을 통해 관련 이론에 대한 부분을 소개하고 필요하면 다양한 애니메이션이나 동영상 촬영을 통해 공유하기도 합니다.\n\n각각의 과정은 흠을 잡을 것이 별로 없습니다."
+  },
+  {
+    "objectID": "stat-edu/수학통계교육의고찰.html#무언가-결여된-느낌은",
+    "href": "stat-edu/수학통계교육의고찰.html#무언가-결여된-느낌은",
+    "title": "수학 통계 교육의 고찰",
+    "section": "무언가 결여된 느낌은",
+    "text": "무언가 결여된 느낌은\n하지만 무언가 결여된 느낌은 지울수가 없습니다.\n무엇이 결여된 것일까요?"
+  },
+  {
+    "objectID": "stat-edu/온-오프라인의연계방안.html",
+    "href": "stat-edu/온-오프라인의연계방안.html",
+    "title": "통계교육 온-오프라인 연계",
+    "section": "",
+    "text": "앞서서 통계교육과정에서\n과정에서 뭔가 부족하다고 느끼는 부분이 있다고 말씀드렸습니다."
+  },
+  {
+    "objectID": "stat-edu/온-오프라인의연계방안.html#현행-이론-학습의-틀은",
+    "href": "stat-edu/온-오프라인의연계방안.html#현행-이론-학습의-틀은",
+    "title": "통계교육 온-오프라인 연계",
+    "section": "현행 이론 학습의 틀은",
+    "text": "현행 이론 학습의 틀은\n벗어날 수 없고 벗어나서도 안되는 부분이라고 생각합니다. 중,고등학습과정은 활용을 위한 이론 학습이기 보다 기준을 삼아야 하는 객관적이고 검증된 도구이기 때문입니다.\n\n이상적인 기준에 맞추어 지식을 활용하고 적용하게 만들기란\n현장에 주어진 시간과 고려해야할 재반사항이 많기 때문에 하면좋고 안해도 무관한 목표가 될 수 있습니다. 이는 결국 교육현장에서 교사, 학생들에게 실제적인 것이 아니라는 것이지요.\n\n\n그럼에도 불구하고\n교육현장에선 상황에서 우리가 생각해봐야 할 것이 있습니다. 현재 당장 필요한 것을 채우는 것은 최우선으로 하되 조금뒤의 미래에 학생들이 실제적인 통계 활용에 대한 방향성을 가지게 된다면 어느 분야에서일지 모르지만 그 역할이 일어날 재해예방이나 현상에 대한 이해를 돕는 도구로 활용할 수 있는 가능성을 가질 수 있게 된다면 그 자체적으로도 의미가 있을 것입니다."
+  },
+  {
+    "objectID": "stat-edu/온-오프라인의연계방안.html#온-오프라인-학습-보강-방안",
+    "href": "stat-edu/온-오프라인의연계방안.html#온-오프라인-학습-보강-방안",
+    "title": "통계교육 온-오프라인 연계",
+    "section": "온-오프라인 학습 보강 방안",
+    "text": "온-오프라인 학습 보강 방안\n일반 중고등 수학 이론보다 통계이론은 현실사례에 적용하여 보기가 좋습니다.\n현재 학습과정에서 통계이론 의 현실에서의 사용과 반영을 좀 더 현세대에 맞게 재구성하는 방식으로 보강을 한다면 미래 사회에 필요한 데이터/AI 활용의 사회를 살아가는데 도움이 될것이라고 생각합니다."
+  },
+  {
+    "objectID": "stat-edu/온-오프라인의연계방안.html#교재-학습에서",
+    "href": "stat-edu/온-오프라인의연계방안.html#교재-학습에서",
+    "title": "통계교육 온-오프라인 연계",
+    "section": "교재 학습에서",
+    "text": "교재 학습에서\n보강되어야 할 부분은\n\n수학한자 용어부분의 단순 순화를 넘어 참고할 수 있는 용어의 대역을 넓히면 좋을 것입니다.\n즉, 교과서에서는 누락된 한자, 영어의 대역표기를 해주면 좋겠습니다.\n교과서를 바꾸는 과정은 매우 복잡하고 시간이 많이 드는 반면 보강학습 교안을 디지털화 하여 제공 할 수 있다면 더 없이 좋을 것입니다.\n예를 들어 도수분포표는 관련분야이 있는 사람이 아니면 무엇을 표현하고 싶은지 이해하기 어려운 수준으로 줄인 망가진 수학 표기방식중 하나라고 생각합니다.\n빈도수의 분포표(Frequency Table)이라고만 표현해줘도 도구의 목적이 무엇인지 유추해내기 쉬울 것이라고 보여집니다.\n대다수의 교과서에서는 공식에 대응하기 위한 용어의 정리 수준이기도 하고 용어 부분에서 이탈율이 높기 때문에 그다음 과정은 알수없는 단어에 답을 채우는 형식을 벗어나기 힘듭니다.\n비슷한 수준의 외국 디지털 교과서를 참고시켜줍니다.\n영어로 된 문장을 해석하라는 것은 말도 안되겠지만 구글 번역 기능의 도움을 받아서 번역한 것을 보여주는 것도 도움이 될 것이라 여겨집니다.\n\n\n국내 수학 강의 일부분을 발췌하였습니다.\n열 명의 1학기 기말고사 시험 수학 점수가 있어요. 92,84,88,76,96,72,92,84,68,96점을 받았다고 보죠.\n점수 대푤로 몇명이나 있는지 표로 만들어볼께요.\n도수분포표에 대한 설명\n\n\n\nimage-20221116122059056\n\n\n\n\n\nimage-20221116122019430\n\n\n\n\n외국 디지털 교과서의 도수분포표의 시작부분을 발췌한 부분입니다.\nThe coach of the Markwell Cougars track team wants to compare the heights of his team to that of their rivals, the Sampson Hawks. \nHe was wondering if there is a correlation between speed and height.\n\n\n\nimage-20221116122226473\n\n\n\n\n\nimage-20221116122244160\n\n\n\n\n\nimage-20221116122522390\n\n\n\n\n차이점은?\n차이점은 무엇일까요? 여러가지 자료를 준비하면서 여기저기 중등수학 1학년 통계 과정에 대한 것을 많이 찾아 보았지만 국내 강의 및 교재는 대부분 비슷하게 구성되어 있었습니다.공식을 외우고 표를 만들고 그래프를 그리는것이 주요목적으로 되어 있습니다.\n외국 통계 교육 과정을 에서 도움을 얻을 수 있는부분은 짤막하지만 무엇을 하기 위해 즉, 지식의 활용 용도가 기술 되어 있음입니다.\n또한 그래프를 표현하는 방식에도 차이가 있습니다. 좀 더 읽기 쉽게 구성이 되어 있고 설명이 표에 잘 붙어 있습니다. 두개의 도수 분포표를 만들어 비교해봄 으로써 통계 분석을 할 수 있는 사례를 만들어 주었습니다.\n\n\n내가 배우는 지식은\n나의 실생활에 사용해볼 수 있는 것인가? 활용해서 나의 삶의 부분을 들여다 볼 수 있을까? 이것을 제공해 줄 수 있다면 그 지식은 입시도구외에도 실제적인 지식으로 승화 할 수 있을 것입니다."
+  },
+  {
+    "objectID": "stat-edu/온-오프라인의연계방안.html#통계-이론을-현실에-적용할-수-있는-사례를",
+    "href": "stat-edu/온-오프라인의연계방안.html#통계-이론을-현실에-적용할-수-있는-사례를",
+    "title": "통계교육 온-오프라인 연계",
+    "section": "통계 이론을 현실에 적용할 수 있는 사례를",
+    "text": "통계 이론을 현실에 적용할 수 있는 사례를\n수집하고 만들어보는 일은 그리 어려운 일이 아닐 것입니다.\n\n일주일간 통학시간과 취침시간의 관계\n좋아하는 아이돌과 사용하는 음악매체와의 관계\n친구를 만나는 횟수와 용돈소비\n성적과 학원 다니는 시간과의 관계\n\n등 일상생활에서의 데이터세트는 무궁무진하고 그 소재는 교사나 교과서보다 학생들이 더 많이 가지고 있고 그것들이 자신들의 삶을 들여다 볼 수 있다고 한다면 흥미를 가지고 접근이 가능할 것이고 무엇보다도 지식이 실체화가 될 수 있는 기회가 될 것입니다."
+  },
+  {
+    "objectID": "stat-edu/온-오프라인의연계방안.html#잘-만들어-져있는-도구이지만",
+    "href": "stat-edu/온-오프라인의연계방안.html#잘-만들어-져있는-도구이지만",
+    "title": "통계교육 온-오프라인 연계",
+    "section": "잘 만들어 져있는 도구이지만",
+    "text": "잘 만들어 져있는 도구이지만\n실습과 이론과의 동떨어진 실습이 학생들에게 많을 도움이 되지 않습니다. 단순히 숫자를 입력하고 결과를 보는 것에 불가하게 되는 것입니다.\n전자계산기가 일상에 도움이 되는 이유는 쇼핑을 할 때 얼마나 싸게 사는 거지에 대한 비교를 빠르게 하기 위한 도구이기 때문입니다. 이와 마찬가지로 통계 실습도구도 단순 계산 결과와 표를 그리는 것으로는 부족합니다.\n\n숫자가 표로 나온다\n이것이 가지는 의미가 어떤것인지 표를 손으로 그리기 어려워서 사용해야 할 도구인지 판단하기 어렵습니다. 즉, 도구의 활용용도가 과제의 숫자를 표로 그리기로 제안하여 제공하는 것에는 아쉬움이 많이 남습니다. 비록 큰 돈이 되지 않는다하더라도 누군가는 그것을 위해 투자하고 고민하여 개선하는 일을 지속하면 좋을 것이라고 보여집니다."
+  },
+  {
+    "objectID": "stat-edu/온-오프라인의연계방안.html#이론의-실습결과를-현실에-반영",
+    "href": "stat-edu/온-오프라인의연계방안.html#이론의-실습결과를-현실에-반영",
+    "title": "통계교육 온-오프라인 연계",
+    "section": "이론의 실습결과를 현실에 반영",
+    "text": "이론의 실습결과를 현실에 반영\n실습결과르 현실에 반영할 수 있도록 하기위한 템플릿을 만드는 일은 어려운 일은 아닐 것입니다. 하지만 구조화한 그 템플릿을 다양한 사례로 변형하여 학생들 스스로가 현실생활의 사례를 분석해볼 수 있도록 기회를 제공해준다면 이것보다 더 좋은 것은 없을 것입니다.\n여러가지 도구가 있을 것이지만 그중에 하나의 사례를 들어본다면\n\n디지털 글쓰기 플랫폼을 이용하여\nR마크다운을 이용한 디지털 글쓰기 플랫폼을 이용하여 템플리트를 만들고 그것을 각자의 상황에 맞게 수정하여 보고 분석하여 볼 수 있도록 합니다. 교사는 분석한 부분에서 보강할 부분이나 방향성을 수정해줌으로 학생들이 실제적으로 활용할 수 있도록 하여 줍니다.\n수행의 과정은 직장 프로세스에 비해 느슨하게 진행이 되므로 한학기중 과제로 진행한다면 학생들이 통계에 대한 활용이나 이해도가 깊어질 것으로 여겨집니다."
+  },
+  {
+    "objectID": "stat-edu/온-오프라인의연계방안.html#reference",
+    "href": "stat-edu/온-오프라인의연계방안.html#reference",
+    "title": "통계교육 온-오프라인 연계",
+    "section": "Reference",
+    "text": "Reference\nhttps://flexbooks.ck12.org/\nhttps://ebsmath.co.kr/easyTong"
   }
 ]
