@@ -1,12 +1,11 @@
 ---
-title: 쿼토(quarto)
-sub-title: github에 웹페이지 만들기 
+title: 쿼토와 깃헙으로 웹페이지 제작
+sub-title: making website with quarto and github
 format:
   revealjs:
     view-distance: 5
     slide-number: true 
-    preview-links: auto
-    incremental: true
+    incremental: false
     theme: sky
 footer: "디지털 글쓰기"
 ---
@@ -65,16 +64,16 @@ hist(math_score, breaks=5, main="B반의 수학 성적빈도", xlab= "수학성�
 
 # 사용해보기 
 
-## demo site 내려받기 
+### demo site 내려받기 
 ```
 git clone https://github.com/joygram/joygram.github.io
 ```
-##  빌드 
+###  빌드 
 ```
 cd joygram.github.io 
 quarto render
 ``` 
-## 배포 
+### 배포 
 ```
 git commit -m "update document" -a 
 git push

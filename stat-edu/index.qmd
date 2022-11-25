@@ -2,7 +2,6 @@
 title: "통계 교육과 디지털 글쓰기"
 subtitle: "자연스러운 온-오프라인 교육 연계 방안"
 page-layout: full
-image: /images/hero_right.png
 ---
 
 # 수학 통계 교육과 디지털 글쓰기 
