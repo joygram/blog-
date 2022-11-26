@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.269">
 
-  <title>쿼토(quarto)와 디지털 글쓰기 - 쿼토(quarto)</title>
+  <title>쿼토(quarto)와 디지털 글쓰기 - 쿼토와 깃헙으로 웹페이지 제작</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -387,7 +387,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">쿼토(quarto)</h1>
+  <h1 class="title">쿼토와 깃헙으로 웹페이지 제작</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -401,26 +401,26 @@
 <section id="용도" class="slide level2">
 <h2>용도</h2>
 <ul>
-<li class="fragment">markdown</li>
-<li class="fragment">R, Python</li>
-<li class="fragment">디지털 글쓰기</li>
-<li class="fragment">다양한 출력 : 퍼블리싱</li>
+<li>markdown</li>
+<li>R, Python</li>
+<li>디지털 글쓰기</li>
+<li>다양한 출력 : 퍼블리싱</li>
 </ul>
 </section>
 <section id="무엇이-좋은가" class="slide level2">
 <h2>무엇이 좋은가?</h2>
 <ul>
-<li class="fragment">마크다운 문서를 그대로 활용</li>
-<li class="fragment">문서가 프레젠테이션이 된다.</li>
-<li class="fragment">편집이 용이하다.</li>
-<li class="fragment">코드를 실행할 수 있다.</li>
+<li>마크다운 문서를 그대로 활용</li>
+<li>문서가 프레젠테이션이 된다.</li>
+<li>편집이 용이하다.</li>
+<li>코드를 실행할 수 있다.</li>
 </ul>
 </section>
 <section id="단점" class="slide level2">
 <h2>단점</h2>
 <ul>
-<li class="fragment">세밀한 작업</li>
-<li class="fragment">세련된 기능 부족</li>
+<li>세밀한 작업</li>
+<li>세련된 기능 부족</li>
 </ul>
 </section>
 <section id="파이썬-코드의-실행" class="slide level2">
@@ -446,8 +446,8 @@
 <section id="심플하고-빠르게" class="slide level2">
 <h2>심플하고 빠르게</h2>
 <ul>
-<li class="fragment">발표자료를 만들고 공유</li>
-<li class="fragment">분석자료와 글쓰기의 통합</li>
+<li>발표자료를 만들고 공유</li>
+<li>분석자료와 글쓰기의 통합</li>
 </ul>
 </section></section>
 <section>
@@ -458,9 +458,9 @@
 <section id="반응형-페이지" class="slide level2">
 <h2>반응형 페이지</h2>
 <ul>
-<li class="fragment">깃헙과 연동.</li>
-<li class="fragment">html을 올리면 호스팅이됨.</li>
-<li class="fragment">자동으로 빌드와 배포가 됨.</li>
+<li>깃헙과 연동.</li>
+<li>html을 올리면 호스팅이됨.</li>
+<li>자동으로 빌드와 배포가 됨.</li>
 </ul>
 </section></section>
 <section>
@@ -468,24 +468,18 @@
 <h1>사용해보기</h1>
 
 </section>
-<section id="demo-site-내려받기" class="slide level2">
-<h2>demo site 내려받기</h2>
+<h3 id="demo-site-내려받기">demo site 내려받기</h3>
 <pre><code>git clone https://github.com/joygram/joygram.github.io</code></pre>
-</section>
-<section id="빌드" class="slide level2">
-<h2>빌드</h2>
+<h3 id="빌드">빌드</h3>
 <pre><code>cd joygram.github.io 
 quarto render</code></pre>
-</section>
-<section id="배포" class="slide level2">
-<h2>배포</h2>
+<h3 id="배포">배포</h3>
 <pre><code>git commit -m "update document" -a 
 git push</code></pre>
 
 <div class="footer footer-default">
 <p>디지털 글쓰기</p>
-</div>
-</section></section>
+</div></section>
     </div>
   </div>
 
@@ -511,7 +505,7 @@ git push</code></pre>
       // https://revealjs.com/config/
       Reveal.initialize({
 'controlsAuto': true,
-'previewLinksAuto': true,
+'previewLinksAuto': false,
 'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
