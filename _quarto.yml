@@ -3,3 +3,12 @@ project:
   output-dir: docs
 website:
   title: "쿼토(quarto)와 디지털 글쓰기"
+  sidebar:
+    contents: auto
+  navbar:
+    left:
+      - text: "쿼토와 깃헙"
+        href: presentation/index.qmd
+
+      - text: "통계교육와 디지털 글쓰기"
+        href: stat-edu/index.qmd
