@@ -1,4 +1,4 @@
-# 쿼토(Quarto) GitHub Pages에 배포해보기 
+# 쿼토(Quarto) GitHub Pages에 배포 
 
 
 
