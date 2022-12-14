@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Editor for digital writing</title>
+	<style>
+		body {
+			max-width: 1024px;
+			margin: 20px auto;
+		}
+	</style>
+	<!-- mathjax 2 -->
+	<script type="text/javascript" async
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"></script>
+	<script type="text/x-mathjax-config">
+        MathJax.Ajax.config.path["mhchem"] = "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
+        MathJax.Hub.Config({
+            TeX: {
+                showProcessingMessages: false,
+                extensions: ["[mhchem]/mhchem.js"],
+                tex2jax: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+                }
+            }
+        });
+    </script>
+	<!-- mathjax 3 -->
+	<!-- <script>
+        MathJax = {
+            version: '3.0.0',
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+            }
+        };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script> -->
+</head>
+
+<body>
+	<h1>Editor</h1>
+	<div id="editor">## 제목 
+```mathwidget 
+x=\frac{-b \pm \sqrt{b^2 -4ac}}{2a} \\ E = mc^2 
+```
+	</div>
+	<script src="./build/ckeditor.js"></script>
+	<script>
+		JoyEditor.Editor.create(document.querySelector('#editor'), {
+			codeBlock: {
+				languages: [
+					{ language: 'plaintext', label: 'Text' },
+					{ language: '{r}', label: 'Rcmd' },
+					{ language: '{python}', label: 'PyCmd' },
+					{ language: 'r', label: 'R' },
+					{ language: 'python', label: 'Python' },
+					{ language: 'css', label: 'css' }
+				]
+			}
+		})
+			.then(editor => {
+				window.editor = editor;
+			})
+			.catch(error => {
+				console.error('There was a problem initializing the editor.', error);
+			});
+	</script>
+</body>
+
+</html>
